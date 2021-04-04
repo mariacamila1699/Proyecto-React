@@ -12,11 +12,11 @@ function HomeScreen(props) {
     return (
         <View style={{ flex: 1, alignItems: 'center', justifyContent: 'center' }}>
 
-            <Image style={s.imageBaground} source={require('./imagen1.jpg')}/>
-            <Text style={{ fontSize: 20 }}>Home Screen</Text>
+            <Image style={s.imageBaground} source={require('./imagen2.jpg')}/>
+            <Text style={{ fontSize: 20 }}>Bienvenidos</Text>
             
 
-            <TouchableOpacity style={{ marginTop: 20, width: 200, height: 50, backgroundColor: '#ff5204', padding: 10, alignItems: 'center', borderRadius: 5 }}
+            <TouchableOpacity style={{ marginTop: 20, width: 200, height: 50, backgroundColor: '#00ffff', padding: 10, alignItems: 'center', borderRadius: 5 }}
                 onPress={() => props.navigation.navigate('Perfil')}>
                 <Text style={{ color: '#fff', fontSize: 20 }}>Ir a perfil</Text>
             </TouchableOpacity>
@@ -28,7 +28,7 @@ function HomeScreen(props) {
 function PerfilScreen() {
     return (
         <View style={{ flex: 1, alignItems: 'center', justifyContent: 'center' }}>
-            <Text style={{ fontSize: 20 }}>Perfil Screen </Text>
+            <Text style={{ fontSize: 20 }}>Productos Screen </Text>
         </View>
     );
 }
@@ -40,6 +40,8 @@ function UsuariosScreen() {
         </View>
     );
 }
+
+
 
 function Menu(props){
     return(
@@ -82,6 +84,7 @@ function MyDrawer() {
                 <Drawer.Screen name="Home" component={HomeScreen} />
                 <Drawer.Screen name="Perfil" component={PerfilScreen} />
                 <Drawer.Screen name="Usuarios" component={UsuariosScreen} />
+                
             </Drawer.Navigator>
         </NavigationContainer>
 
