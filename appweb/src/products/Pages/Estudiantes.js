@@ -60,40 +60,50 @@ class Estudiantes extends React.Component {
                                 </header>
                                 <section className="modal-card-body">
                                     <div className="field">
-                                        <label className="label">Nombre del Estudiante </label>
+                                        <label className="label">Nombre</label>
                                         <div className="control">
                                             <input
                                                 className="input"
                                                 type="text"
-                                                placeholder="Ingresa su producto"
+                                                placeholder="Ingresa su nombre"
                                             />
                                         </div>
                                     </div>
                                     <div className="field">
-                                        <label className="label">Descripcion</label>
+                                        <label className="label">Apellido</label>
                                         <div className="control">
-                                            <textarea className="input" placeholder="Ingresa su descripcion" maxLength="12">
+                                            <textarea className="input" placeholder="Ingresa su apellido" maxLength="12">
 
                                             </textarea>
                                         </div>
                                     </div>
                                     <div className="field">
-                                        <label className="label">Precio</label>
+                                        <label className="label">Direccion</label>
                                         <div className="control">
                                             <input
                                                 className="input"
                                                 type="text"
-                                                placeholder="$0.0"
+                                                placeholder="infresa su direccion"
                                             />
                                         </div>
                                     </div>
                                     <div className="field">
-                                        <label className="label">Stock</label>
+                                        <label className="label">Sexo</label>
                                         <div className="control">
                                             <input
                                                 className="input"
                                                 type="text"
-                                                placeholder="Ingresa su stock"
+                                                placeholder="Ingresa su sexo"
+                                            />
+                                        </div>
+                                    </div>
+                                    <div className="field">
+                                        <label className="label">Telefono</label>
+                                        <div className="control">
+                                            <input
+                                                className="input"
+                                                type="text"
+                                                placeholder="infresa su Telefono"
                                             />
                                         </div>
                                     </div>

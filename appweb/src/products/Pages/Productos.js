@@ -1,7 +1,7 @@
 import React from 'react'
 import { Container, Section } from 'react-bulma-components'
 import Card from '../components/Card'
-import Modal from '../components/Modal'
+
 
 
 
@@ -14,7 +14,7 @@ const Productos = () => {
                 
             
                 <Card></Card>
-                <Modal></Modal>
+                
                 
                 
             

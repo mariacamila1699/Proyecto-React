@@ -9,7 +9,7 @@ const Usuarios = () =>{
             <Container>
                 
                 
-                <h1>vacia</h1>
+                <h1>Usuarios</h1>
                 
                 
 

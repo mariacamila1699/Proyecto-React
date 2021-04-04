@@ -1,5 +1,7 @@
 import React from 'react'
 import {Container, Section} from 'react-bulma-components'
+import Imagen from '../components/Imagen'
+
 
 
 const Home = () =>{
@@ -8,9 +10,10 @@ const Home = () =>{
         <Section>
             <Container>
                 
-                
-                <h1>WEB HOME VACIA</h1>
-                
+            <div class="box">  
+            <h1 className="title has-text-centered">web home vacia</h1>
+            <Imagen></Imagen>
+            </div>    
                 
 
             </Container>
