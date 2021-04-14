@@ -5,6 +5,7 @@ import { ImageBackground, View, Text, TouchableOpacity, Image, StyleSheet } from
 import { NavigationContainer } from '@react-navigation/native';
 import { createStackNavigator } from '@react-navigation/stack';
 import { createDrawerNavigator, DrawerItemList } from '@react-navigation/drawer';
+import Usuarios from '../MyScreens/Usuarios';
 import s from './style'
 
 
@@ -28,7 +29,7 @@ function HomeScreen(props) {
 function PerfilScreen() {
     return (
         <View style={{ flex: 1, alignItems: 'center', justifyContent: 'center' }}>
-            <Text style={{ fontSize: 20 }}>Productos Screen </Text>
+            <Text style={{ fontSize: 20 }}>Roles Screen </Text>
         </View>
     );
 }
@@ -82,7 +83,7 @@ function MyDrawer() {
         <NavigationContainer>
             <Drawer.Navigator drawerContent={(props)=> <Menu {...props}/>}>
                 <Drawer.Screen name="Home" component={HomeScreen} />
-                <Drawer.Screen name="Perfil" component={PerfilScreen} />
+                <Drawer.Screen name="Roles" component={PerfilScreen} />
                 <Drawer.Screen name="Usuarios" component={UsuariosScreen} />
                 
             </Drawer.Navigator>
