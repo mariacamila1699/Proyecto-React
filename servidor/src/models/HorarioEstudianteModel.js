@@ -3,19 +3,18 @@ const Schema = mongoose.Schema;
 
 const HorarioEstudianteSchema = new Schema({
 
-    dia: {
+  dia: {
+    type: String,
+    required: 'Dia'
+  },
+  hora_inicio: {
       type: String,
-      required: 'Dia'
-    },
-    horainicio: {
-        type: Number,
-        required: 'HoraInicio'
-    },
-    horaFinal: {
-        type: Number,
-        required: 'HoraFinal'
-    },
-
+      required: 'Hora_Inicio'
+  },
+  hora_final: {
+      type: String,
+      required: 'Hora_Final'
+  },
     Created_date: {
         type: Date,
         default: Date.now

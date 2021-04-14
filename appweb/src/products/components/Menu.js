@@ -52,22 +52,20 @@ const Menu = () => {
                             <Link to={'/Materias'} className='nav-links'>Materias</Link>
                             </a>
                             <a class="navbar-item">
-                            <Link to={'/Estudiantes'} className='nav-links'>Estudiantes</Link>
+                            <Link to={'/Inscripcion'} className='nav-links'>Inscripciones</Link>
                             </a>
                             <div class="navbar-item has-dropdown is-hoverable">
                                 <a class="navbar-link">
-                                    Mas
+                                    Horarios
                                 </a>
                                 <div class="navbar-dropdown">
                                     <a class="navbar-item">
-                                        otro
+                                    <Link to={'/HorarioProfesor'} className='nav-links'>HorarioProfesor</Link>
                                     </a>
                                     <a class="navbar-item">
-                                        otro
+                                    <Link to={'/HorarioEstudiante'} className='nav-links'>HorarioEstudiante</Link>
                                     </a>
-                                    <a class="navbar-item">
-                                        otro
-                                    </a>
+                                    
 
 
                                 </div>

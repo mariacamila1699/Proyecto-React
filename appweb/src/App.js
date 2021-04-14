@@ -6,8 +6,11 @@ import Home from './products/Pages/Home';
 import Usuarios from './products/Pages/Usuarios';
 import Header from './products/components/Header';
 import Roles from './products/Pages/Roles';
-import Estudiantes from './products/Pages/Estudiantes';
+import Inscripcion from './products/Pages/Inscripcion';
 import Materias from './products/Pages/Materias';
+import HorarioProfesor  from './products/Pages/HorarioProfesor'
+import HorarioEstudiante  from './products/Pages/HorarioEstudiante'
+
 
 
 
@@ -22,7 +25,9 @@ function App () {
       <Route path='/Usuarios' exact component={Usuarios}></Route>
       <Route path='/Roles' exact component={Roles}></Route>
       <Route path='/Materias' exact component={Materias}></Route>
-      <Route path='/Estudiantes' exact component={Estudiantes}></Route>
+      <Route path='/Inscripcion' exact component={Inscripcion}></Route>
+      <Route path='/HorarioProfesor' exact component={HorarioProfesor}></Route>
+      <Route path='/HorarioEstudiante' exact component={HorarioEstudiante}></Route>
 
     </Switch>
   </Router>

@@ -26,7 +26,7 @@ CrearHorarioProfesor = async (req, res) => {
    
     try {
    
-        const horario = await HorarioProfesorModel.find();
+        const horario = await HorarioProfesorModel.find().populate({ path: "usuarios", populate:{ path: "roles"}});
     
         res.status(200).json({
           horario

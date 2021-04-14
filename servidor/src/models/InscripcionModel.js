@@ -7,15 +7,21 @@ const InscripcionSchema = new Schema({
       type: String,
       required: 'Fecha Inscripcion'
     },
+
+
+    usuarios: {
+      type: mongoose.Schema.Types.ObjectId,
+      ref: 'Usuario',
+      required: true,
+  },
+
+
     Created_date: {
         type: Date,
         default: Date.now
       },
 
-    estudiante: {
-        type: Schema.Types.ObjectId,
-        ref: 'Estudiantes'
-    }
+    
 
     
     });

@@ -5,8 +5,8 @@ CrearHorario = async (req, res) => {
 
     try {
    
-      const Estudiante = new HorarioEstudianteModel(req.body);
-      await Estudiante.save();
+      const horario = new HorarioEstudianteModel(req.body);
+      await horario.save();
   
       res.status(200).json({
         mensaje:"horario creado exitosamente"
