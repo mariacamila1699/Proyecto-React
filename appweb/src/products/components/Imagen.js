@@ -22,7 +22,7 @@ const Imagen = () => {
                 
                 <div class="column has-text-centered">
                 <figure class="image is-128x128 is-inline-block" style={style.enlace}>
-                <img class="is-rounded" style={style.enlace} src="https://www.magisnet.com/wp-content/uploads/2020/03/efectos-del-coronavirus-sobre-la-educacio%CC%81n.jpg" />
+                <img class="is-rounded" style={style.enlace} src="https://urpimedia.com/wp-content/uploads/2019/07/marketing-digital-difusi%C3%B3n-instituciones-educativas.png" />
 
                 </figure>
                 </div>

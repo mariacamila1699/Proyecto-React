@@ -11,7 +11,7 @@ const Home = () =>{
             <Container>
                 
             <div class="box">  
-            <h1 className="title has-text-centered">web home vacia</h1>
+            <h1 className="title has-text-centered">EQUIPO EDUCATIVO</h1>
             <Imagen></Imagen>
             </div>    
                 
