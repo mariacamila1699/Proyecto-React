@@ -10,6 +10,8 @@ import Inscripcion from './products/Pages/Inscripcion';
 import Materias from './products/Pages/Materias';
 import HorarioProfesor  from './products/Pages/HorarioProfesor'
 import HorarioEstudiante  from './products/Pages/HorarioEstudiante'
+import Grupo from './products/Pages/Grupo'
+import Aula from './products/Pages/Aula'
 
 
 
@@ -28,6 +30,8 @@ function App () {
       <Route path='/Inscripcion' exact component={Inscripcion}></Route>
       <Route path='/HorarioProfesor' exact component={HorarioProfesor}></Route>
       <Route path='/HorarioEstudiante' exact component={HorarioEstudiante}></Route>
+      <Route path='/Grupo' exact component={Grupo}></Route>
+      <Route path='/Aula' exact component={Aula}></Route>
 
     </Switch>
   </Router>

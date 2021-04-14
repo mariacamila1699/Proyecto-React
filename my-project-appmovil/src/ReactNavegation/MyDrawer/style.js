@@ -78,9 +78,9 @@ export default {
 
     imageBaground: {
         
-        width: 300,
-        height: 300,
-        borderRadius: 35
+        width: 250,
+        height: 250,
+        borderRadius: 80
         
     },
 

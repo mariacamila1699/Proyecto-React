@@ -54,6 +54,12 @@ const Menu = () => {
                             <a class="navbar-item">
                             <Link to={'/Inscripcion'} className='nav-links'>Inscripciones</Link>
                             </a>
+                            <a class="navbar-item">
+                            <Link to={'/Grupo'} className='nav-links'>Grupos</Link>
+                            </a>
+                            <a class="navbar-item">
+                            <Link to={'/Aula'} className='nav-links'>Aulas</Link>
+                            </a>
                             <div class="navbar-item has-dropdown is-hoverable">
                                 <a class="navbar-link">
                                     Horarios
@@ -76,12 +82,12 @@ const Menu = () => {
                     <div class="navbar-end">
                         <div class="navbar-item">
                             <div class="buttons">
-                                <a class="button is-light">
-                                    <strong>Registrarse</strong>
+                                <a class="button is-danger">
+                                    <strong>Hola</strong>
                                 </a>
-                                <a class="button is-light">
-                                    Log in
-          </a>
+                                <a class="button is-danger">
+                                    Saludos
+                               </a>
                             </div>
                         </div>
                     </div>

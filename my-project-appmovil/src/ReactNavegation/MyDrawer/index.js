@@ -12,11 +12,11 @@ function HomeScreen(props) {
     return (
         <View style={{ flex: 1, alignItems: 'center', justifyContent: 'center' }}>
 
-            <Image style={s.imageBaground} source={require('./imagen2.jpg')}/>
-            <Text style={{ fontSize: 20 }}>Bienvenidos</Text>
+            <Image style={s.imageBaground} source={require('./imagen3.png')}/>
+            <Text style={{ fontSize: 35 }}>Bienvenidos</Text>
             
 
-            <TouchableOpacity style={{ marginTop: 20, width: 200, height: 50, backgroundColor: '#00ffff', padding: 10, alignItems: 'center', borderRadius: 5 }}
+            <TouchableOpacity style={{ marginTop: 20, width: 200, height: 50, backgroundColor: '#1f3aff', padding: 10, alignItems: 'center', borderRadius: 5 }}
                 onPress={() => props.navigation.navigate('Perfil')}>
                 <Text style={{ color: '#fff', fontSize: 20 }}>Ir a perfil</Text>
             </TouchableOpacity>
@@ -49,7 +49,7 @@ function Menu(props){
             <View style={s.bgContainer}>
                 <TouchableOpacity>
                     <View style={s.userContainer}>
-                        <Image style={s.userImagen} source={require('./logo-brainapps.png')}/>
+                        <Image style={s.userImagen} source={require('./logo1.png')}/>
                         <View style={s.camaraContainer}>
                             <Image style={s.camaraIcon} source={require('./photo-camera.png')}/>
 
@@ -59,8 +59,8 @@ function Menu(props){
 
                     </View>
                     <View style={s.userNombre}>
-                        <Text style={s.userTitulo}>Camila</Text>
-                        <Text style={s.userSubTitulo}>ver perfil</Text>
+                        <Text style={s.userTitulo}>Equipo educativo</Text>
+                        <Text style={s.userSubTitulo}>Home</Text>
 
                     </View>
                 </TouchableOpacity>
