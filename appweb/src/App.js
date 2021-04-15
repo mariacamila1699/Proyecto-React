@@ -12,6 +12,8 @@ import HorarioProfesor  from './products/Pages/HorarioProfesor'
 import HorarioEstudiante  from './products/Pages/HorarioEstudiante'
 import Grupo from './products/Pages/Grupo'
 import Aula from './products/Pages/Aula'
+import Carrera from './products/Pages/Carrera'
+
 
 
 
@@ -32,6 +34,7 @@ function App () {
       <Route path='/HorarioEstudiante' exact component={HorarioEstudiante}></Route>
       <Route path='/Grupo' exact component={Grupo}></Route>
       <Route path='/Aula' exact component={Aula}></Route>
+      <Route path='/Carrera' exact component={Carrera}></Route>
 
     </Switch>
   </Router>

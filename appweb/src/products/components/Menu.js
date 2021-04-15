@@ -23,7 +23,7 @@ const Menu = () => {
                 <nav class="navbar is-primary" role="navigation" aria-label="main navigation" style={style}>
                     <div class="navbar-brand">
                         <a class="navbar-item" href="https://bulma.io">
-                        <img src="https://lh3.googleusercontent.com/proxy/JwN1bYj5ofOBlm1ccL82hkuDwFn18PDf9xIDxN72TN64raYlFFQj0hHL2Ib2VRGUNMynFx1eZslFSu0-b3Qb4Ab255WmQhg2HbOSqTk1aFN29ugIwqDHHEI2dtRjnZTta55kuioib0Xmr-3yS9w" width="155" height="70"/>
+                        <img src="https://lh3.googleusercontent.com/proxy/NcrmvCIZZ1aMcPsRfevu5jx2OAPiY6bOrgr_pYHozuCLNCbBxrsHw_tuk2M0xZaErHo0LUBGNnnxEXVCA8_0QqgkKHqWvotHeXGTBGUdHBggg0bPugB4U3YYr395PN8fqfpPo-WzR5irTjHTEvjLacPl" width="130" height="700"/>
                         </a>
 
                         <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false" data-target="navbarBasicExample">
@@ -60,6 +60,7 @@ const Menu = () => {
                             <a class="navbar-item">
                             <Link to={'/Aula'} className='nav-links'>Aulas</Link>
                             </a>
+                            
                             <div class="navbar-item has-dropdown is-hoverable">
                                 <a class="navbar-link">
                                     Horarios
@@ -70,6 +71,9 @@ const Menu = () => {
                                     </a>
                                     <a class="navbar-item">
                                     <Link to={'/HorarioEstudiante'} className='nav-links'>HorarioEstudiante</Link>
+                                    </a>
+                                    <a class="navbar-item">
+                                    <Link to={'/Carrera'} className='nav-links'>Carreras</Link>
                                     </a>
                                     
 
