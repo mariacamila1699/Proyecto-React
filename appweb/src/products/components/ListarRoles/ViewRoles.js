@@ -1,24 +1,24 @@
 import React from 'react'
-import Consultas from '../../Services/Carrera/CarreraService'
+import Consultas from '../../Services/Roles/RolesService'
 
-export default class ViewCarrera extends React.Component {
+export default class ViewRoles extends React.Component {
     state = {
-        carrera: [], isModal: false
+        Rol: [], isModal: false
     };
 
     async componentDidMount() {
-        this.getCarrera();
+        this.getRoles();
         
 
     }
     
-    getCarrera = () => {
-        Consultas.getAllCarrera()
+    getRoles = () => {
+        Consultas.getAllRoles()
         .then((response) => {
             this.setState({
-                carrera: response.data["carrera"]
+                Rol: response.data["Rol"]
             });
-            console.log(response.data["carrera"]);
+            console.log(response.data["Rol"]);
           })
           .catch(e => {
             console.log(e);
@@ -35,26 +35,24 @@ export default class ViewCarrera extends React.Component {
         return (
 
             <div class="box">
-            <div className="columns is-centered is-vcentered">
-                <div className="column is-9">
+            <div className="columns is-centered">
+                <div className="column is-6">
                     <div className="table-container">
                     <table class="table is-bordered is-striped is-fullwidth is-hoverable">
                         <thead>
                         <tr>
                             <th>#</th>
-                            <th>Nombre</th>
-                            <th>Semestre</th>
+                            <th>Tipo</th>
                             <th>Estado</th>
                         </tr>
                         </thead>
                         <tbody>
                             {
-                                this.state.carrera.map((carrera, index) => {
+                                this.state.Rol.map((rol, index) => {
                                     return(
                                         <tr>
                                             <td>{index}</td>
-                                            <td>{carrera.nombre}</td>
-                                            <td>{carrera.semestre}</td>
+                                            <td>{rol.tipo}</td>
                                             <td>
                                             <a class="button is-warning">Editar</a> ||
                                             <a class="button is-danger">Eliminar</a>

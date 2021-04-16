@@ -1,6 +1,6 @@
 import React from 'react'
 import { Container, Section } from 'react-bulma-components'
-import ViewMaterias from "../components/ListarMaterias/ViewMaterias.Components"
+import ViewMaterias from "../components/ListarMaterias/ViewMaterias"
 
 
 

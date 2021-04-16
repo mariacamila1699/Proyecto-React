@@ -1,6 +1,6 @@
 import React from 'react'
 import { Container, Section } from 'react-bulma-components'
-import ViewGrupo from "../components/ListarGrupos/ViewGrupo.Components"
+import ViewGrupo from "../components/ListarGrupos/ViewGrupo"
 
 
 

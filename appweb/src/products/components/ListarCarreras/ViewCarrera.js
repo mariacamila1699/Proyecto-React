@@ -1,24 +1,24 @@
 import React from 'react'
-import Consultas from '../../Services/Roles/RolesService'
+import Consultas from '../../Services/Carrera/CarreraService'
 
-export default class ViewRoles extends React.Component {
+export default class ViewCarrera extends React.Component {
     state = {
-        Rol: [], isModal: false
+        carrera: [], isModal: false
     };
 
     async componentDidMount() {
-        this.getRoles();
+        this.getCarrera();
         
 
     }
     
-    getRoles = () => {
-        Consultas.getAllRoles()
+    getCarrera = () => {
+        Consultas.getAllCarrera()
         .then((response) => {
             this.setState({
-                Rol: response.data["Rol"]
+                carrera: response.data["carrera"]
             });
-            console.log(response.data["Rol"]);
+            console.log(response.data["carrera"]);
           })
           .catch(e => {
             console.log(e);
@@ -42,19 +42,21 @@ export default class ViewRoles extends React.Component {
                         <thead>
                         <tr>
                             <th>#</th>
-                            <th>Tipo</th>
+                            <th>Nombre</th>
+                            <th>Semestre</th>
                             <th>Estado</th>
                         </tr>
                         </thead>
                         <tbody>
                             {
-                                this.state.Rol.map((rol, index) => {
+                                this.state.carrera.map((carrera, index) => {
                                     return(
                                         <tr>
                                             <td>{index}</td>
-                                            <td>{rol.tipo}</td>
+                                            <td>{carrera.nombre}</td>
+                                            <td>{carrera.semestre}</td>
                                             <td>
-                                            <a class="button is-warning">Editar</a> ||
+                                            <a class="button is-warning">Editar</a> // 
                                             <a class="button is-danger">Eliminar</a>
                                             </td>
                                             

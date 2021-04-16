@@ -1,6 +1,9 @@
 import React from 'react'
-import { Container, Section } from 'react-bulma-components'
-import ViewUsuarios from "../components/ListarUsuarios/ViewUsuarios.Components.js"
+import { Container, Section, Card } from 'react-bulma-components'
+import ViewUsuarios from "../components/ListarUsuarios/ViewUsuarios.js"
+
+
+
 
 
 
@@ -118,6 +121,8 @@ class Usuarios extends React.Component {
                             </div>
                         </div>
                         <ViewUsuarios />
+
+                        <Card />
                         
                     </div>
 

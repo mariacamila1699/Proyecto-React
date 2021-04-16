@@ -1,6 +1,6 @@
 import React from 'react'
 import { Container, Section } from 'react-bulma-components'
-import ViewRoles from "../components/ListarRoles/ViewRoles.Components"
+import ViewRoles from "../components/ListarRoles/ViewRoles"
 
 
 

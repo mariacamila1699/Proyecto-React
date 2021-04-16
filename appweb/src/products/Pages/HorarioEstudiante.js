@@ -1,6 +1,6 @@
 import React from 'react'
 import { Container, Section } from 'react-bulma-components'
-import ViewHorarioEstudiante from "../components/ListarHorarioEstudiante/ViewHorarioEstudiante.Component"
+import ViewHorarioEstudiante from "../components/ListarHorarioEstudiante/ViewHorarioEstudiante"
 
 
 
