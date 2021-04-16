@@ -56,7 +56,7 @@ export default class ViewgrupoProfesor extends React.Component {
                                             <td>{grupo.nombre}</td>
                                             <td>{grupo.capacidad}</td>
                                             <td>
-                                            <a class="button is-warning">Editar</a> ||
+                                            <a class="button is-primary">Editar</a> ||
                                             <a class="button is-danger">Eliminar</a>
                                             </td>
                                             

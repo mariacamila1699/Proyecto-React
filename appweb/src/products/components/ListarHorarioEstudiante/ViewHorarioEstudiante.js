@@ -57,8 +57,9 @@ export default class ViewHorarioEstudiante extends React.Component {
                                             <td>{horario.dia}</td>
                                             <td>{horario.hora_inicio}</td>
                                             <td>{horario.hora_final}</td>
+                                            <td>{horario.hora_final}</td>
                                             <td>
-                                            <a class="button is-warning">Editar</a> ||
+                                            <a class="button is-primary">Editar</a> ||
                                             <a class="button is-danger">Eliminar</a>
                                             </td>
                                             

@@ -57,7 +57,7 @@ export default class ViewAula extends React.Component {
                                             <td>{aula.bloque}</td>
                                             
                                             <td>
-                                            <a class="button is-warning">Editar</a> ||
+                                            <a class="button is-primary">Editar</a> ||
                                             <a class="button is-danger">Eliminar</a>
                                             </td>
                                             

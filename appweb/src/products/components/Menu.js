@@ -23,7 +23,7 @@ const Menu = () => {
                 <nav class="navbar is-primary" role="navigation" aria-label="main navigation" style={style}>
                     <div class="navbar-brand">
                         <a class="navbar-item" href="https://bulma.io">
-                        <img src="https://lh3.googleusercontent.com/proxy/NcrmvCIZZ1aMcPsRfevu5jx2OAPiY6bOrgr_pYHozuCLNCbBxrsHw_tuk2M0xZaErHo0LUBGNnnxEXVCA8_0QqgkKHqWvotHeXGTBGUdHBggg0bPugB4U3YYr395PN8fqfpPo-WzR5irTjHTEvjLacPl" width="130" height="700"/>
+                        <img src="https://lh3.googleusercontent.com/proxy/xXV5FVpfIh9HSV5FTVUe9VAJrR4DkhpY_APjjVKmUaUVJ5Lk7OBvM7idzLCBVaBtAZMxjG0ghmWwi1jSZb1VAbrv4b6MMuMfmLjcGp6o2VDjqgA9fg1zF6ACWIZs4oiT2uqYGR8KG7Gt0G7EGA8" width="130" height="700"/>
                         </a>
 
                         <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false" data-target="navbarBasicExample">

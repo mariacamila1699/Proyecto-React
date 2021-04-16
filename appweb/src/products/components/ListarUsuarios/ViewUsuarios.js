@@ -34,7 +34,7 @@ export default class ViewUsuarios extends React.Component {
         const active = this.state.isModal ? "is-active" : "";
         return (
 
-            <div class="box">
+          
             <div className="columns is-centered is-vcentered">
                 <div className="column is-9">
                     <div className="table-container">
@@ -62,7 +62,7 @@ export default class ViewUsuarios extends React.Component {
                                             <td>{usuario.correo}</td>
                                             <td>{usuario["roles"].tipo}</td>
                                             <td>
-                                            <a class="button is-warning">Editar</a> ||
+                                            <a class="button is-primary">Editar</a> ||
                                             <a class="button is-danger">Eliminar</a>
                                             </td>
                                             
@@ -77,7 +77,7 @@ export default class ViewUsuarios extends React.Component {
                     </div>
                 </div>
             </div>
-        </div> 
+         
         )
 
     }

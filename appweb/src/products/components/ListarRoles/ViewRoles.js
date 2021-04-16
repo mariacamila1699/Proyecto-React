@@ -54,7 +54,7 @@ export default class ViewRoles extends React.Component {
                                             <td>{index}</td>
                                             <td>{rol.tipo}</td>
                                             <td>
-                                            <a class="button is-warning">Editar</a> ||
+                                            <a class="button is-primary">Editar</a> ||
                                             <a class="button is-danger">Eliminar</a>
                                             </td>
                                             

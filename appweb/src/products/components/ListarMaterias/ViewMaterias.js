@@ -61,7 +61,7 @@ export default class ViewMaterias extends React.Component {
                                                         <td>{materia["usuarios"].nombre} {materia["usuarios"].apellido}</td>
                                                         <td>{materia["usuarios"]["roles"].tipo}</td>
                                                         <td>
-                                                            <a class="button is-warning">Editar</a> ||
+                                                            <a class="button is-primary">Editar</a> ||
                                                         <a class="button is-danger">Eliminar</a>
                                                         </td>
 

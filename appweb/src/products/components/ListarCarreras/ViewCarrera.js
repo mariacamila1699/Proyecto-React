@@ -56,7 +56,7 @@ export default class ViewCarrera extends React.Component {
                                             <td>{carrera.nombre}</td>
                                             <td>{carrera.semestre}</td>
                                             <td>
-                                            <a class="button is-warning">Editar</a> // 
+                                            <a class="button is-primary">Editar</a> // 
                                             <a class="button is-danger">Eliminar</a>
                                             </td>
                                             

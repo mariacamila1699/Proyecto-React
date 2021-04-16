@@ -64,7 +64,7 @@ export default class Viewinscripcion extends React.Component {
                                                         
                                                         
                                                         <td>
-                                                            <a class="button is-warning">Editar</a> ||
+                                                            <a class="button is-primary">Editar</a> ||
                                                         <a class="button is-danger">Eliminar</a>
                                                         </td>
 
