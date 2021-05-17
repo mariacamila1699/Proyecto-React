@@ -6,8 +6,12 @@ class Consultas {
     return http.get("/Roles");
   }
 
-  CreateRoles(){
-    return http.post("/Roles");
+  CreateRoles(tipo){
+    return http.post("/Roles",tipo);
+  }
+
+  EditarRoles(id,tipo){
+    return http.put(`/Roles/${id}`, tipo);
   }
 
   

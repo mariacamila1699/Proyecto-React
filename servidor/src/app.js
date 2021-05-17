@@ -19,6 +19,8 @@ const UsuarioController = require('./controllers/UsuarioController');
 
 
 
+
+
 const app = express();
 
 
@@ -50,6 +52,7 @@ app.use('/api', HorarioEstudianteController);
 app.use('/api', HorarioProfesorController);
 app.use('/api', RolesController);
 app.use('/api', UsuarioController);
+
 
 
 app.listen(app.get('port'), () => {
