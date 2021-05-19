@@ -10,6 +10,10 @@ class Consultas {
     return http.post("/Materia");
   }
 
+  EditarMaterias(id,nombre,){
+    return http.put(`/Materia/${id}`, nombre);
+  }
+
   
 }
 
