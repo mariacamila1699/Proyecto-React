@@ -9,6 +9,8 @@ export default class ViewRoles extends React.Component {
             id: '',
             tipo: '',
             tipomodal: ''
+            
+            
         }
 
     };
@@ -82,9 +84,12 @@ export default class ViewRoles extends React.Component {
             .catch(error => {
                 console.log(error.message);
             })
-
-
     }
+
+    
+
+   
+    
 
 
     render() {
@@ -170,6 +175,8 @@ export default class ViewRoles extends React.Component {
                                         disabled
                                         value={formulario ? formulario.id : ''}
 
+                                        
+
                                     />
                                 </div>
                             </div>
@@ -184,13 +191,15 @@ export default class ViewRoles extends React.Component {
                                         placeholder="Ingrese el rol"
                                         name="tipo"
                                         value={formulario ? formulario.tipo : ''}
+                                        
 
                                     />
                                 </div>
                             </div>
                         </section>
                         <footer class="modal-card-foot">
-                            {this.state.tipomodal === 'insertar' ?
+                            {this.state.tipomodal === 'insertar' ? 
+                            
                                 <button onClick={() => this.funcionpost()} class="button is-success">Save changes</button>
                                 :
                                 <button className="button is-primary" onClick={() => this.funcioneditar(formulario.id)}>Editar</button>
