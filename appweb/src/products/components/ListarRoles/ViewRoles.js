@@ -9,8 +9,8 @@ export default class ViewRoles extends React.Component {
             id: '',
             tipo: '',
             tipomodal: ''
-            
-            
+
+
         }
 
     };
@@ -86,10 +86,12 @@ export default class ViewRoles extends React.Component {
             })
     }
 
-    
-
-   
-    
+    funcioneliminar = (id) => {
+        Consultas.EliminarRoles(id, this.state.formulario).then(response=>{
+          this.getRoles();
+        })
+        
+      }
 
 
     render() {
@@ -117,11 +119,11 @@ export default class ViewRoles extends React.Component {
                     </div>
 
                 </div>
-
-                <div className="columns">
-                    <div className="column">
-                        <div class="table-container is-fluid m-5">
-                            <table class="table">
+               
+                <div className="columns is-centered is-vcentered">
+                    <div className=" column is-5">
+                        <div class="table-container">
+                            <table class="table is-bordered is-striped is-fullwidth is-hoverable">
                                 <thead>
                                     <tr>
                                         <th>#</th>
@@ -137,7 +139,8 @@ export default class ViewRoles extends React.Component {
                                                     <td>{index}</td>
                                                     <td>{rol.tipo}</td>
                                                     <td>
-                                                        <a onClick={() => { this.funcionmodalupdate(rol); this.funcionmodal() }} class="button is-primary">Editar</a> ||        <a class="button is-danger">Eliminar</a>
+                                                        <a onClick={() => { this.funcionmodalupdate(rol); this.funcionmodal() }} class="button is-primary">Editar</a> ||       
+                                                        <a onClick={() =>  { this.funcioneliminar(formulario.id) }}  class="button is-danger">Eliminar</a>
                                                     </td>
 
                                                 </tr>
@@ -175,7 +178,7 @@ export default class ViewRoles extends React.Component {
                                         disabled
                                         value={formulario ? formulario.id : ''}
 
-                                        
+
 
                                     />
                                 </div>
@@ -191,15 +194,15 @@ export default class ViewRoles extends React.Component {
                                         placeholder="Ingrese el rol"
                                         name="tipo"
                                         value={formulario ? formulario.tipo : ''}
-                                        
+
 
                                     />
                                 </div>
                             </div>
                         </section>
                         <footer class="modal-card-foot">
-                            {this.state.tipomodal === 'insertar' ? 
-                            
+                            {this.state.tipomodal === 'insertar' ?
+
                                 <button onClick={() => this.funcionpost()} class="button is-success">Save changes</button>
                                 :
                                 <button className="button is-primary" onClick={() => this.funcioneditar(formulario.id)}>Editar</button>
@@ -207,14 +210,16 @@ export default class ViewRoles extends React.Component {
                             <button onClick={this.funcionmodal} class="button">Cancel</button>
 
                         </footer>
+
+                        
                     </div>
+
+                    
                 </div>
+
+                
+                
             </div>
-
-
-
-
-
 
         )
 

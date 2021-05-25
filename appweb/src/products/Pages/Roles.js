@@ -1,23 +1,30 @@
 import React from 'react'
+import { Container, Section } from 'react-bulma-components'
 import Getroles from '../components/ListarRoles/ViewRoles'
 
 
-class  Roles extends React.Component{  
+class Roles extends React.Component {
 
 
-    render(){
-        
+    render() {
+
         return (
-            <div class="container is-fluid">
-                <br class="mb-5" />
-               
-                
-               
-                <Getroles/>
-            </div>
+            <section>
+                <Container>
+                    <div class="container is-fluid">
+                        <br class="mb-5" />
+
+
+
+                        <Getroles />
+
+                    </div>
+                </Container>
+            </section>
+
         );
     }
-    
+
 }
 
 export default Roles;

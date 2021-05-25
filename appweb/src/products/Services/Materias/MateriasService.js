@@ -6,12 +6,12 @@ class Consultas {
     return http.get("/Materia");
   }
 
-  CreateRoles(){
-    return http.post("/Materia");
+  CreateMaterias(nombre,creditos,usuarios){
+    return http.post("/Materia",nombre,creditos,usuarios);
   }
 
-  EditarMaterias(id,nombre,){
-    return http.put(`/Materia/${id}`, nombre);
+  EditarMaterias(id,nombre,creditos,usuarios){
+    return http.put(`/Materia/${id}`, nombre,creditos,usuarios);
   }
 
   

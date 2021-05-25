@@ -14,6 +14,10 @@ class Consultas {
     return http.put(`/Roles/${id}`, tipo);
   }
 
+  EliminarRoles(id,tipo){
+    return http.delete(`/Roles/${id}`,tipo);
+  }
+
   
 }
 
