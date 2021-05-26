@@ -88,9 +88,10 @@ export default class Viewinscripcion extends React.Component {
     }
 
     funcioneliminar = (id) => {
+        console.info(id)
         Consultas.EliminarInscripcion(id, this.state.formulario)
             .then((response) => {
-                this.getRoles();
+                this.getInscripcion();
         })
         
       }
@@ -152,9 +153,10 @@ export default class Viewinscripcion extends React.Component {
                                                         <td>{inscripcion.fecha_inscripcion}</td>
                                                         <td>{inscripcion["user"].nombre}</td>
                                                         
+                                                        
                                                         <td>
                                                             <a class="button is-primary" onClick={()=>{this.funcionmodalupdate(inscripcion); this.handleClick()}}>Editar</a> ||
-                                                        <a class="button is-danger" onClick={() => this.funcioneliminar(formulario.id)}>Eliminar</a>
+                                                        <a class="button is-danger" onClick={() => this.funcioneliminar(inscripcion._id)}>Eliminar</a>
                                                         </td>
 
                                                     </tr>

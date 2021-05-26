@@ -141,7 +141,7 @@ export default class ViewRoles extends React.Component {
                                                     <td>{rol.tipo}</td>
                                                     <td>
                                                         <a onClick={() => { this.funcionmodalupdate(rol); this.funcionmodal() }} class="button is-primary">Editar</a> ||       
-                                                        <a onClick={() =>  this.funcioneliminar(rol) }  class="button is-danger">Eliminar</a>
+                                                        <a onClick={() =>  this.funcioneliminar(rol._id) }  class="button is-danger">Eliminar</a>
                                                     </td>
 
                                                 </tr>
@@ -204,7 +204,7 @@ export default class ViewRoles extends React.Component {
                         <footer class="modal-card-foot">
                             {this.state.tipomodal === 'insertar' ?
 
-                                <button onClick={() => this.funcionpost()} class="button is-success">Save changes</button>
+                                <button onClick={() => this.funcionpost()} class="button is-primary">Guardar</button>
                                 :
                                 <button className="button is-primary" onClick={() => this.funcioneditar(formulario.id)}>Editar</button>
                             }

@@ -6,8 +6,12 @@ class Consultas {
     return http.get("/Grupo");
   }
 
-  CreateRoles(){
-    return http.post("/Grupo");
+  CreateGrupo(nombre,capacidad){
+    return http.post("/Grupo",nombre,capacidad);
+  }
+
+  EditarGrupo(id,nombre,capacidad){
+    return http.put(`/Grupo/${id}`, nombre,capacidad);
   }
 
   

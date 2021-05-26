@@ -15,6 +15,7 @@ class Consultas {
   }
 
   EliminarInscripcion(id){
+    console.log(id)
     return http.delete(`/Inscripcion/${id}`);
   }
 
