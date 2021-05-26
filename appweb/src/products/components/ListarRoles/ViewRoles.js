@@ -87,8 +87,9 @@ export default class ViewRoles extends React.Component {
     }
 
     funcioneliminar = (id) => {
-        Consultas.EliminarRoles(id, this.state.formulario).then(response=>{
-          this.getRoles();
+        Consultas.EliminarRoles(id)
+            .then((response) => {
+                this.getRoles();
         })
         
       }
@@ -140,7 +141,7 @@ export default class ViewRoles extends React.Component {
                                                     <td>{rol.tipo}</td>
                                                     <td>
                                                         <a onClick={() => { this.funcionmodalupdate(rol); this.funcionmodal() }} class="button is-primary">Editar</a> ||       
-                                                        <a onClick={() =>  { this.funcioneliminar(formulario.id) }}  class="button is-danger">Eliminar</a>
+                                                        <a onClick={() =>  this.funcioneliminar(rol) }  class="button is-danger">Eliminar</a>
                                                     </td>
 
                                                 </tr>

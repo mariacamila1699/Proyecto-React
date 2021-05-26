@@ -67,6 +67,7 @@ export default class ViewMaterias extends React.Component {
         this.setState({
             tipomodal: 'actualizar',
             formulario: {
+                id: materia._id,
                 nombre: materia.nombre,
                 creditos: materia.creditos,
                 usuarios: materia.usuarios,
@@ -75,11 +76,14 @@ export default class ViewMaterias extends React.Component {
     }
 
     funcioneditar = (id) => {
-        Consultas.EditarMaterias(id, this.state.formulario)
+        Consultas.EditarMaterias(id,this.state.formulario)
             .then((response) => {
                 this.funcionmodal();
                 this.getMaterias();
 
+            })
+            .catch(error => {
+                console.log(error.message);
             })
             
 
@@ -174,6 +178,22 @@ export default class ViewMaterias extends React.Component {
                                         />
                                     </header>
                                     <section className="modal-card-body">
+
+                                    <div className="field">
+                                            <label className="label">id</label>
+                                            <div className="control">
+                                                <input
+                                                    className="input"
+                                                    type="text"
+                                                    id="id"
+                                                    name="id"
+                                                    onChange={this.funcioncambios}
+                                                    disabled
+                                                    value={formulario ? formulario.id : ''}
+
+                                                />
+                                            </div>
+                                        </div>
                                         <div className="field">
                                             <label className="label">Nombre</label>
                                             <div className="control">

@@ -6,8 +6,12 @@ class Consultas {
     return http.get("/Usuario");
   }
 
-  CreateUsuario(){
-    return http.post("/Usuario");
+  CreateUsuario(nombre,apellido,correo,roles){
+    return http.post("/Usuario",nombre,apellido,correo,roles);
+  }
+
+  EditarUsuario(id,nombre,apellido,correo,roles){
+    return http.put(`/Usuario/${id}`, nombre,apellido,correo,roles);
   }
 
   

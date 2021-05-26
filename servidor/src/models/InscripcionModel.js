@@ -9,11 +9,12 @@ const InscripcionSchema = new Schema({
     },
 
 
-    usuarios: {
+    user: {
       type: mongoose.Schema.Types.ObjectId,
       ref: 'Usuario',
-      required: true,
-  },
+      require: true,
+
+    },
 
 
     Created_date: {

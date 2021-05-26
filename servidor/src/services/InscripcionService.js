@@ -30,7 +30,7 @@ CrearInscripcion = async (req, res) => {
    
     try {
    
-        const inscripcion = await InscripcionModel.find().populate({ path: "usuarios", populate:{ path: "roles"}});
+        const inscripcion = await InscripcionModel.find().populate({ path: "user", populate:{ path: "roles"}});
     
         res.status(200).json({
           inscripcion
