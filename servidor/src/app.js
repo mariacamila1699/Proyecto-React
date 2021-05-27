@@ -1,6 +1,7 @@
 const express = require('express');
 const cors = require('cors');
 const db = require('./config/conexiondb');
+const morgan = require ('morgan')
 
 
 // direccionar controller
@@ -22,6 +23,7 @@ const UsuarioController = require('./controllers/UsuarioController');
 
 
 const app = express();
+app.use(morgan('dev'))
 
 
 app.set('port', process.env.PORT || 4000);

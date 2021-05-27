@@ -80,7 +80,7 @@ export default class Viewinscripcion extends React.Component {
         Consultas.EditarInscripcion(id, this.state.formulario)
             .then((response) => {
                 this.handleClick();
-                this.getRoles();
+                this.getInscripcion();
             })
             .catch(error => {
                 console.log(error.message);

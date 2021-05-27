@@ -8,7 +8,8 @@ export default class ViewgrupoProfesor extends React.Component {
         formulario: {
             id: '',
             nombre: '',
-            capacidad: ''
+            capacidad: '',
+            tipomodal: ''
         }
     };
 
@@ -61,6 +62,38 @@ export default class ViewgrupoProfesor extends React.Component {
             })
     }
 
+    funcionmodalupdate = (grupo) => {
+        this.setState({
+            tipomodal: 'actualizar',
+            formulario: {
+                id: grupo._id,
+                nombre: grupo.nombre,
+                capacidad: grupo.capacidad,
+                
+            }
+        })
+    }
+
+    functionput = (id) => {
+        Consultas.EditarGrupo(id, this.state.formulario)
+            .then((response) => {
+                this.handleClick();
+                this.getGrupo();
+            })
+            .catch(error => {
+                console.log(error.message);
+            })
+    }
+
+    funcioneliminar = (id) => {
+        Consultas.EliminarGrupo(id, this.state.formulario)
+            .then((response) => {
+                this.getGrupo();
+        })
+        
+      }
+
+
 
     render() {
         const active = this.state.isModal ? "is-active" : "";
@@ -82,7 +115,7 @@ export default class ViewgrupoProfesor extends React.Component {
                         </div>
                         <div className="column is-2">
                             <section class="section">
-                                <button onClick={this.handleClick} className="button is-primary">
+                                <button onClick={() => { this.setState({ formulario: null, tipomodal: 'insertar' }); this.handleClick() }} className="button is-primary">
                                     Agregar Grupo
                                 </button>
                             </section>
@@ -112,8 +145,8 @@ export default class ViewgrupoProfesor extends React.Component {
                                                     <td>{grupo.nombre}</td>
                                                     <td>{grupo.capacidad}</td>
                                                     <td>
-                                                        <a class="button is-primary">Editar</a> ||
-                                            <a class="button is-danger">Eliminar</a>
+                                                        <a class="button is-primary" onClick={()=>{this.funcionmodalupdate(grupo); this.handleClick()}}>Editar</a> ||
+                                                        <a class="button is-danger" onClick={() => this.funcioneliminar(grupo._id)}>Eliminar</a>
                                                     </td>
 
                                                 </tr>
@@ -150,7 +183,7 @@ export default class ViewgrupoProfesor extends React.Component {
                                         type="text"
                                         name="id"
                                         disabled
-                                        value={formulario.id}
+                                        value={formulario?formulario.id: ''}
                                         
                                     />
                                 </div>
@@ -165,7 +198,7 @@ export default class ViewgrupoProfesor extends React.Component {
                                         type="text"
                                         name="nombre"
                                         placeholder="Ingrese nombre"
-                                        value={formulario.nombre}
+                                        value={formulario?formulario.nombre: ''}
                                     />
                                 </div>
                             </div>
@@ -180,17 +213,21 @@ export default class ViewgrupoProfesor extends React.Component {
                                         type="text"
                                         name="capacidad"
                                         placeholder="Ingrese capacidad"
-                                        value={formulario.capacidad}
+                                        value={formulario?formulario.capacidad: ''}
                                     />
                                 </div>
                             </div>
                             
                         </section>
                         <footer className="modal-card-foot">
+                        {this.state.tipomodal === 'insertar' ?  
                             <button className="button is-primary" onClick={() => this.funcionpost()}>Agregar</button>
+                            :
+                            <button className="button is-primary"  onClick={() => this.functionput(formulario.id)}>Editar</button>
+                        }   
                             <button onClick={this.handleClick} className="button">
                                 Cancelar
-                                </button>
+                            </button>
                         </footer>
                     </div>
                 </div>

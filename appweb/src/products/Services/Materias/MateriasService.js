@@ -14,6 +14,10 @@ class Consultas {
     return http.put(`/Materia/${id}`, nombre,creditos,usuarios);
   }
 
+  EliminarMateria(id){
+    return http.delete(`/Materia/${id}`);
+  }
+
   
 }
 

@@ -14,6 +14,11 @@ class Consultas {
     return http.put(`/Aula/${id}`, nombre,bloque);
   }
 
+  EliminarAula(id){
+    return http.delete(`/Aula/${id}`);
+  }
+
+
   
 }
 

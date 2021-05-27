@@ -14,6 +14,10 @@ class Consultas {
     return http.put(`/Grupo/${id}`, nombre,capacidad);
   }
 
+  EliminarGrupo(id){
+    return http.delete(`/Grupo/${id}`);
+  }
+
   
 }
 

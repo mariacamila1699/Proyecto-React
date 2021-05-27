@@ -8,7 +8,8 @@ export default class ViewAula extends React.Component {
         formulario: {
             id: '',
             nombre: '',
-            bloque: ''
+            bloque: '',
+            tipomodal: ''
         }
     };
 
@@ -61,6 +62,37 @@ export default class ViewAula extends React.Component {
             })
     }
 
+    funcionmodalupdate = (aula) => {
+        this.setState({
+            tipomodal: 'actualizar',
+            formulario: {
+                id: aula._id,
+                nombre: aula.nombre,
+                bloque: aula.bloque,
+                
+            }
+        })
+    }
+
+    functionput = (id) => {
+        Consultas.EditarAula(id, this.state.formulario)
+            .then((response) => {
+                this.handleClick();
+                this.getAula();
+            })
+            .catch(error => {
+                console.log(error.message);
+            })
+    }
+
+    funcioneliminar = (id) => {
+        Consultas.EliminarAula(id, this.state.formulario)
+            .then((response) => {
+                this.getAula();
+        })
+        
+      }
+
 
     render() {
         const active = this.state.isModal ? "is-active" : "";
@@ -81,7 +113,7 @@ export default class ViewAula extends React.Component {
                         </div>
                         <div className="column is-2">
                             <section class="section">
-                                <button onClick={this.handleClick} className="button is-primary">
+                                <button onClick={() => { this.setState({ formulario: null, tipomodal: 'insertar' }); this.handleClick() }} className="button is-primary">
                                     Agregar Aula
                                 </button>
                             </section>
@@ -116,8 +148,8 @@ export default class ViewAula extends React.Component {
                                                     <td>{aula.bloque}</td>
 
                                                     <td>
-                                                        <a class="button is-primary">Editar</a> ||
-                                            <a class="button is-danger">Eliminar</a>
+                                                        <a class="button is-primary" onClick={()=>{this.funcionmodalupdate(aula); this.handleClick()}}>Editar</a> ||
+                                                        <a class="button is-danger" onClick={() => this.funcioneliminar(aula._id)}>Eliminar</a>
                                                     </td>
 
                                                 </tr>
@@ -154,7 +186,7 @@ export default class ViewAula extends React.Component {
                                         type="text"
                                         name="id"
                                         disabled
-                                        value={formulario.id}
+                                        value={formulario?formulario.id: ''}
                                         
                                     />
                                 </div>
@@ -169,7 +201,7 @@ export default class ViewAula extends React.Component {
                                         type="text"
                                         name="nombre"
                                         placeholder="Ingresa su nombre"
-                                        alue={formulario.nombre}
+                                        value={formulario?formulario.nombre: ''}
                                     />
                                 </div>
                             </div>
@@ -183,16 +215,20 @@ export default class ViewAula extends React.Component {
                                         type="text"
                                         name="bloque"
                                         placeholder="Ingresa bloque"
-                                        alue={formulario.bloque}
+                                        value={formulario?formulario.bloque: ''}
                                     />
                                 </div>
                             </div>
                         </section>
                         <footer className="modal-card-foot">
+                        {this.state.tipomodal === 'insertar' ?   
                             <button className="button is-primary" onClick={() => this.funcionpost()}>Agregar</button>
+                            :
+                            <button className="button is-primary"  onClick={() => this.functionput(formulario.id)}>Editar</button>
+                        }
                             <button onClick={this.handleClick} className="button">
                                 Cancelar
-                                </button>
+                            </button>
                         </footer>
                     </div>
                 </div>

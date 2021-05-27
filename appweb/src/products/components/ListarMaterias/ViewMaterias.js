@@ -86,9 +86,15 @@ export default class ViewMaterias extends React.Component {
                 console.log(error.message);
             })
             
-
-
     }
+
+    funcioneliminar = (id) => {
+        Consultas.EliminarMateria(id, this.state.formulario)
+            .then((response) => {
+                this.getMaterias();
+        })
+        
+      }
 
     render() {
         const active = this.state.isModal ? "is-active" : "";
@@ -148,7 +154,7 @@ export default class ViewMaterias extends React.Component {
                                                                     <td>{materia["usuarios"]["roles"].tipo}</td>
                                                                     <td>
                                                                         <a onClick={() => { this.funcionmodalupdate(materia); this.funcionmodal() }} class="button is-primary">Editar</a> ||
-                                                                        <a class="button is-danger">Eliminar</a>
+                                                                        <a class="button is-danger" onClick={() => this.funcioneliminar(materia._id)}>Eliminar</a>
                                                                     </td>
 
                                                                 </tr>

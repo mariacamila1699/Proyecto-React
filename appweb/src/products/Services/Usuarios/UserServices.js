@@ -14,6 +14,10 @@ class Consultas {
     return http.put(`/Usuario/${id}`, nombre,apellido,correo,roles);
   }
 
+  EliminarUsuario(id){
+    return http.delete(`/Usuario/${id}`);
+  }
+
   
 }
 

@@ -6,8 +6,16 @@ class Consultas {
     return http.get("/Carrera");
   }
 
-  CreateRoles(){
-    return http.post("/Carrera");
+  CreateCarrera(nombre,semestre){
+    return http.post("/Carrera",nombre,semestre);
+  }
+
+  EditarCarrera(id,nombre,semestre){
+    return http.put(`/Carrera/${id}`, nombre,semestre);
+  }
+
+  EliminarCarrera(id){
+    return http.delete(`/Carrera/${id}`);
   }
 
   

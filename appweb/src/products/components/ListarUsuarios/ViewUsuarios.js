@@ -82,12 +82,20 @@ export default class ViewUsuarios extends React.Component {
         Consultas.EditarUsuario(id, this.state.formulario)
             .then((response) => {
                 this.handleClick();
-                this.getRoles();
+                this.getUsuario();
             })
             .catch(error => {
                 console.log(error.message);
             })
     }
+
+    funcioneliminar = (id) => {
+        Consultas.EliminarUsuario(id, this.state.formulario)
+            .then((response) => {
+                this.getUsuario();
+        })
+        
+      }
 
 
 
@@ -152,7 +160,7 @@ export default class ViewUsuarios extends React.Component {
                                                     <td>{usuario["roles"].tipo}</td>
                                                     <td>
                                                         <a class="button is-primary" onClick={()=>{this.funcionmodalupdate(usuario); this.handleClick()}}>Editar</a> ||
-                                                            <a class="button is-danger">Eliminar</a>
+                                                        <a class="button is-danger" onClick={() => this.funcioneliminar(usuario._id)}>Eliminar</a>
                                                     </td>
 
                                                 </tr>

@@ -89,9 +89,7 @@ const Menu = () => {
                                 <a class="button is-danger">
                                     <strong>Hola</strong>
                                 </a>
-                                <a class="button is-danger">
-                                    Saludos
-                               </a>
+                                
                             </div>
                         </div>
                     </div>
